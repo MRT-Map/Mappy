@@ -1,5 +1,6 @@
 module.exports = (client) => {
     client.on("message", message => {
+        if (message.author == client.user) return;
         // Command handling
         if (message.content.startsWith(client.config.commandPrefix)) {
             let args = message.content.substring(client.config.commandPrefix.length).split(" ");
