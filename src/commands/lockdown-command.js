@@ -1,4 +1,4 @@
-const { removeArrayElement } = require("../util");
+const { removeArrayElement } = require("../util/misc-util");
 
 /* TODO add two different modes of lockdown: message and join
 *  Message: no messaging or reacting (possibly auto-enabled by spam, will have to also ban offenders)
