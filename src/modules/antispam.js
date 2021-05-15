@@ -16,7 +16,7 @@ module.exports = {
             });
         }
 
-        // Remove message after interval
+        // Remove message from list after interval
         setTimeout(() => {
             miscUtil.removeArrayElement(module.exports.recentUserMessages[message.author.id], message.id);
         }, message.client.config.userMessageSpamThresholdMilliseconds);
