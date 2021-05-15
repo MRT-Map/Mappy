@@ -1,3 +1,5 @@
 {
-    "commandPrefix": "-"
+    "commandPrefix": "-",
+    "userMessageSpamThreshold": 8,
+    "userMessageSpamThresholdMilliseconds": 13000
 }

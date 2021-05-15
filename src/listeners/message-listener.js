@@ -1,3 +1,5 @@
+const antispam = require("../modules/antispam");
+
 module.exports = (client) => {
     client.on("message", message => {
         if (message.author == client.user) return;
@@ -10,5 +12,8 @@ module.exports = (client) => {
                 }
             })
         }
+
+        // Antispam shit
+        antispam.submitMessage(message);
     });
 }
