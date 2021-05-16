@@ -12,7 +12,7 @@ module.exports = {
             message.reply("slow down your messages! You're pretty close to being banned for spam.");
         } else if (module.exports.recentUserMessages[message.author.id].length >= message.client.config.userMessageSpamThreshold) {
             message.guild.members.ban(message.author, {reason: `Sent ${module.exports.recentUserMessages[message.author.id].length} messages in ${message.client.config.userMessageSpamThresholdMilliseconds / 1000} seconds.`, days: 1}).then(banned => {
-                message.channel.send(`**${banned.tag}** (${banned}) has been banned for spam.`);
+                message.channel.send(`**${banned.tag}** (${banned}) has been banned for spam (sent ${module.exports.recentUserMessages[message.author.id].length} messages in ${message.client.config.userMessageSpamThresholdMilliseconds / 1000} seconds).`);
             });
         }
 
